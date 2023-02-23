@@ -2,22 +2,18 @@ from OpenGL.GL import *
 from OpenGL.GLU import *
 from OpenGL.GLUT import *
 
-
-
 def init():
     global MatShn
     LightPos = [1,0,0,1]
     LightAmb = [0.2,0.2,0.2,1]
     LightDiff = [1,1,1,1]
     LightSpec = [1,1,1,1 ]
-
     MatShn = [128]
 
     glLightfv(GL_LIGHT0,GL_POSITION,LightPos)
     glLightfv(GL_LIGHT0,GL_DIFFUSE,LightDiff)
     glLightfv(GL_LIGHT0,GL_AMBIENT,LightAmb)
     glLightfv(GL_LIGHT0,GL_SPECULAR,LightSpec)
-
     glEnable(GL_LIGHTING)
     glEnable(GL_LIGHT0)
     
