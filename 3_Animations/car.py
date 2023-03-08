@@ -3,7 +3,6 @@ from OpenGL.GLU import *
 from OpenGL.GLUT import *
 import sys
 import math
-
 GLOBAL_X=0
 GLOBAL_Y=0
 ROTATE_X=0
@@ -42,7 +41,6 @@ def drawSpoke(x,y,s):
    glVertex2f(x,y)
    glVertex2f(x+ROTATE_X,y+ROTATE_Y)
    glEnd()
-
 def drawRectangle(x,y):
    glBegin(GL_QUADS)
    glVertex2f(x-250,y-100)
@@ -61,7 +59,6 @@ def drawCar():
    drawSpoke(GLOBAL_X,GLOBAL_Y,1)
    glFlush()
    glutSwapBuffers()
-
 def keyboard(key,x,y):
    key=key.decode()
    i=0
@@ -74,15 +71,13 @@ def keyboard(key,x,y):
    elif key=='s':
       i=0
       animate(0)
-
 def animate(speed):
    global GLOBAL_X
    global GLOBAL_Y
    global DIR
    global THETA
    global ROTATE_Y
-   global ROTATE_X
-  
+   global ROTATE_X 
    glutPostRedisplay()
    if(speed==0):
       return
@@ -93,9 +88,6 @@ def animate(speed):
    if( THETA==360):
       THETA=0
    THETA=THETA+speed
-   
-
-
 def main():
    glutInit(sys.argv)
    glutInitWindowPosition(0,0)

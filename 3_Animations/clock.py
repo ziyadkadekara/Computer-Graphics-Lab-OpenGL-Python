@@ -3,7 +3,6 @@ from OpenGL.GLU import *
 from OpenGL.GLUT import *
 import sys
 import math
-
 WINDOW_SIZE=600
 ROTATE_X=[0,0,0]#s,m,h
 ROTATE_Y=[350,300,200]
@@ -29,7 +28,6 @@ def drawHand(length,x,y):
     glVertex2f(0,0)
     glVertex2f(x,y)
     glEnd()
-
 def drawClock():
     glClear(GL_COLOR_BUFFER_BIT)
     glPointSize(POINT_SIZE)
@@ -53,8 +51,7 @@ def animate(value):
         THETA[1]=0
         THETA[2]+=1
     if(THETA[2]>=360):
-        THETA[2]=0
-    
+        THETA[2]=0   
 def main():
     glutInit(sys.argv)
     glutInitWindowPosition(0,0)
