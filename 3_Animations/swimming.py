@@ -23,6 +23,7 @@ def display():
     glVertex2f(wsize,-wsize)
     glVertex2f(-wsize,-wsize)
     glEnd()
+    
     glLineWidth(7)
     glColor3f(1,0,0)
     glBegin(GL_LINES)   
